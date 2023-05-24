@@ -30,4 +30,9 @@ public class IndexController {
     public Object getRankData() {
         return rankService.getRank();
     }
+
+    @RequestMapping("/test")
+    public String getTest(){
+        return "<html><body>123test</body></html>";
+    }
 }
