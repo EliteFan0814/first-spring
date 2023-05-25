@@ -14,7 +14,7 @@ public class DataServiceDecoratorCache implements DataService {
     public String a(int i) {
         String cacheValue = cache.get("a");
         if (cacheValue == null) {
-            System.out.println("装饰器a");
+            System.out.println("装饰器缓存器a");
             String val = dataService.a(1);
             cache.put("a", val);
             return val;
@@ -28,8 +28,8 @@ public class DataServiceDecoratorCache implements DataService {
     public String b(int i) {
         String cacheValue = cache.get("b");
         if (cacheValue == null) {
-            System.out.println("装饰器b");
-            String val = dataService.a(1);
+            System.out.println("装饰器缓存器b");
+            String val = dataService.b(1);
             cache.put("a", val);
             return val;
         } else {
