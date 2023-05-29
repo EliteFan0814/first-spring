@@ -1,5 +1,6 @@
 package org.example.service;
 
+import org.example.anno.Cache;
 import org.example.dao.RankDao;
 import org.example.dao.UserMapper;
 import org.example.entity.RankItem;
@@ -14,6 +15,7 @@ public class RankService {
     private UserMapper userMapper;
     @Autowired
     RankDao rankDao;
+    @Cache
     public List<RankItem> getRank(){
         return rankDao.getRank();
     }
